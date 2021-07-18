@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+}
+body{
+    background-color: #F7FAFC;
+}
+.main, .others{
+    flex:4;
+}

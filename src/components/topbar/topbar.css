@@ -1,0 +1,77 @@
+.topbar {
+    width: 100%;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid #EFF3F8;
+  }
+  
+  .topbarWrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-weight: 600;
+    font-size: 30px;
+    top: 27px;
+    left: 31px;
+    color: #000000;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .topRight{
+      display: flex;
+      flex:5;
+      align-items: center;
+      background-color: #F7FAFC;
+      justify-content: flex-end;
+      padding:10px 0;
+
+  }
+  .topLeft{
+    flex:1;
+    background-color: #ffffff;
+    /* padding-left: 31px; */
+    padding:10px 0px 10px 31px;
+  }
+  .topbarIconContainer {
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #7C8DB5;
+    
+  }
+  .nameSt{
+    color: #7C8DB5;
+    font-size: 14px;
+  }
+  /* .topIconBadge{
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: -5px;
+      right: 0px;
+      background-color: red;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+  } */
+  
+  /* .topAvatar{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+  } */
+  .btn.btn-primary{
+    background-color:#347AE2 ;
+  }

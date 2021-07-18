@@ -1,0 +1,35 @@
+.sidebar{
+    height: calc(100vh - 60px) ;
+    flex:1 4;
+    position: sticky;
+    top:60px;
+    overflow-y: scroll;
+    padding: 10px;
+}
+.sidebarWrapper{
+   padding: 10px;
+   color: 000000;
+   font: normal normal normal 15px/23px Poppins;
+}
+.sidebarMenu{
+    margin-bottom: 10px;
+}
+.sidebarHeading {
+    font: normal normal 300 14px/21px Poppins;
+    /* color: #2569E6; */
+}
+.sidebarList {
+   list-style: none;
+   padding: 5px;
+
+}
+.sidebarSubHeading{
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+}
+.sidebarSubHeading.active, .sidebarSubHeading:hover{
+    border-right: 3px solid #347AE2;
+    font: normal normal normal 15px/23px Poppins;
+    color: #2569E6;
+}
