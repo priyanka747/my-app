@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    ;
   }
   
   .logo {
@@ -31,14 +32,16 @@
       align-items: center;
       background-color: #F7FAFC;
       justify-content: flex-end;
-      padding:10px 0;
-
+      min-height: 60px;
+      border-bottom: 1px solid #EFF3F8;
   }
   .topLeft{
     flex:1;
     background-color: #ffffff;
+    min-height: 60px;
     /* padding-left: 31px; */
-    padding:10px 0px 10px 31px;
+    /* padding:7.5px 32px 8.5px 23px; */
+    border-bottom: 1px solid #EFF3F8;
   }
   .topbarIconContainer {
     position: relative;

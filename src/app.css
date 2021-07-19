@@ -4,6 +4,9 @@
 body{
     background-color: #F7FAFC;
 }
-.main, .others{
-    flex:4;
+*{
+    box-sizing: border-box;
+}
+.main{
+    flex:5;
 }

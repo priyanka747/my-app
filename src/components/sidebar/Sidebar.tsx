@@ -7,46 +7,54 @@ const Sidebar = () => {
         <div className="sidebar">
 
             <div className="sidebarWrapper">
-                <div className="sidebarMenu">
-                    <h4 className="sidebarHeading">  Heading 1</h4>
+                <div>
+                    <div className="sidebarMenu">
+                        <h4 className="sidebarHeading">  Heading 1</h4>
                         <ul className="sidebarList">
-                        <li className="sidebarSubHeading active"><DashboardIcon fontSize="small"/>
-                            Menu Option 1</li>
-                        <li className="sidebarSubHeading"><BookmarkOutlinedIcon fontSize="small"/>
-                            Menu Option 2</li>
-                        <li className="sidebarSubHeading"><BookmarkOutlinedIcon fontSize="small"/>
-                            Menu Option 3</li>
-                           
+                            <li className="sidebarSubHeading active"><DashboardIcon fontSize="small" className="sidebarIcon" />
+                                Menu Option 1</li>
+                            <li className="sidebarSubHeading"><BookmarkOutlinedIcon fontSize="small" className="sidebarIcon" />
+                                Menu Option 2</li>
+                            <li className="sidebarSubHeading"><BookmarkOutlinedIcon fontSize="small" className="sidebarIcon" />
+                                Menu Option 3</li>
+
                         </ul>
                     </div>
                     <div className="sidebarMenu">
-                    <h4 className="sidebarHeading">  Heading 2</h4>
-                    <ul className="sidebarList">
-                    <li className="sidebarSubHeading"><BookmarkOutlinedIcon fontSize="small"/>
-                            Menu Option 4</li>
-                            <li className="sidebarSubHeading"><BookmarkOutlinedIcon fontSize="small"/>
-                            Menu Option 5</li>
+                        <h4 className="sidebarHeading">  Heading 2</h4>
+                        <ul className="sidebarList">
+                            <li className="sidebarSubHeading"><BookmarkOutlinedIcon fontSize="small" className="sidebarIcon" />
+                                Menu Option 4</li>
+                            <li className="sidebarSubHeading"><BookmarkOutlinedIcon fontSize="small" className="sidebarIcon" />
+                                Menu Option 5</li>
                         </ul>
-                        </div>
+                    </div>
                     <div className="sidebarMenu">
-                    <h4 className="sidebarHeading">  Heading 3</h4>
-                    <ul className="sidebarList">
-                    <li className="sidebarSubHeading"><BookmarkOutlinedIcon fontSize="small"/>
-                            Menu Option 6</li>
-                            <li className="sidebarSubHeading"><BookmarkOutlinedIcon fontSize="small"/>
-                            Menu Option 7</li>
+                        <h4 className="sidebarHeading">  Heading 3</h4>
+                        <ul className="sidebarList">
+                            <li className="sidebarSubHeading"><BookmarkOutlinedIcon fontSize="small" className="sidebarIcon" />
+                                Menu Option 6</li>
+                            <li className="sidebarSubHeading"><BookmarkOutlinedIcon fontSize="small" className="sidebarIcon" />
+                                Menu Option 7</li>
                         </ul>
-                        </div>
+                    </div>
                     <div className="sidebarMenu">
-                    <h4 className="sidebarHeading">  Heading 4</h4>
-                    <ul className="sidebarList">
-                    <li className="sidebarSubHeading"><BookmarkOutlinedIcon fontSize="small"/>
-                            Menu Option 8</li>
-                            <li className="sidebarSubHeading"><BookmarkOutlinedIcon fontSize="small"/>
-                            Menu Option 9</li>
+                        <h4 className="sidebarHeading">  Heading 4</h4>
+                        <ul className="sidebarList">
+                            <li className="sidebarSubHeading"><BookmarkOutlinedIcon fontSize="small" className="sidebarIcon" />
+                                Menu Option 8</li>
+                            <li className="sidebarSubHeading"><BookmarkOutlinedIcon fontSize="small" className="sidebarIcon" />
+                                Menu Option 9</li>
                         </ul> </div>
+                </div>
+                <div className="bottomMenu">
+                    <ul className="sidebarList">
+                        <li className="sidebarSubHeading"><BookmarkOutlinedIcon fontSize="small" className="sidebarIcon" />
+                            logout</li>
+                    </ul> </div>
             </div>
         </div>
+
     )
 }
 
