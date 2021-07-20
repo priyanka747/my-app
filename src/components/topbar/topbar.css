@@ -89,6 +89,19 @@
     text-align: left;
     padding:15px 30px !important;
   }
+  .notificationMenu{
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .notificationMenu h4{
+    justify-content: flex-start;
+    text-align: left;
+    padding:0 30px !important;
+    font-family: 'Poppins', sans-serif;
+    color:#2569E6;
+    font-size: 14px;
+    font-weight: 600;
+  }
   .MuiListItemIcon-root{
     min-width: 28px !important;
   }
@@ -96,4 +109,8 @@
     top: 50px !important;
     max-width: 300px !important;
     clear: left !important;
+  }
+  .label{
+    background-color: #E1E8F6 !important;
+    padding: 0px 15px ;
   }

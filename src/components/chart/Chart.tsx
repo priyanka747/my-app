@@ -9,9 +9,16 @@ import {
     Legend,
     ResponsiveContainer,
 } from "recharts";
+import StopIcon from '@material-ui/icons/Stop';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import Grid from '@material-ui/core/Grid';
+import { Divider } from "@material-ui/core";
+import { green } from '@material-ui/core/colors';
+import { ListItem } from "@material-ui/core";
+import { List } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 interface chartData {
     title: string;
     data: any;
@@ -27,9 +34,24 @@ const CustomTooltip = (props: tooltipProps) => {
     if (props.active && props.payload && props.payload.length) {
         return (
             <div className="custom-tooltip">
-                <p className="label">{`${props.label} : ${props.payload[0].value}`}</p>
+                <p className="label">{`${props.label}`}</p>
+                <Divider orientation="horizontal"/>
+                <List>
+                    <ListItem alignItems="flex-start" className="listItemChart">
+                       <Box flexGrow={1} alignItems="center"><StopIcon color="primary" fontSize="small"/>Type 1</Box> <Typography >{`  ${props.payload[0].value}`} </Typography> 
+                    </ListItem>
+                    <ListItem alignItems="flex-start" className="listItemChart">
+                    <Box flexGrow={1} alignItems="center"><StopIcon style={{ color: green[500] }}  fontSize="small"/>Type 2</Box><Typography >{`  ${props.payload[1].value}`} </Typography> 
+
+                    </ListItem>
+                    <ListItem alignItems="flex-start" className="listItemChart">
+                    <Box flexGrow={1} alignItems="center"><StopIcon color="error" fontSize="small"/>Type 3</Box> <Typography >{`  ${props.payload[2].value}`} </Typography> 
+                    </ListItem>
+                </List>
+                
+                
                 {/* <p className="intro">{getIntroOfPage(props.label)}</p> */}
-                <p className="desc">Anything you want can be displayed here.</p>
+                {/* <p className="desc">Anything you want can be displayed here.</p> */}
             </div>
         );
     }
@@ -83,6 +105,7 @@ export default function Chart(props: chartData) {
                     <Line type="monotone" dataKey="Type 1" stroke="#0000ff" />
                     <Line type="monotone" dataKey="Type 2" stroke="#00ff00" />
                     <Line type="monotone" dataKey="Type 3" stroke="#ff0000" />
+                    {/* <Tooltip /> */}
                     <Tooltip content={<CustomTooltip />} />
                     <Legend />
                     {props.grid && <CartesianGrid stroke="#e0dfdf" strokeDasharray="5 5" />}

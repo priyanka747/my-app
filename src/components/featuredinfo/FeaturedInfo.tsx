@@ -12,10 +12,10 @@ export default function FeaturedInfo() {
         <Grid container spacing={3} direction="row" alignItems="center">
         <Grid item xs={12} sm={2}>
 
-      <Button variant="outlined" size="large" name=" Tab 1" color="primary" onClick={()=> setTab(1) } className={(tab == 1) ? 'activeTab': ''} fullWidth> Tab 1</Button>
+      <Button variant="outlined" size="large" name=" Tab 1" color="primary" onClick={()=> setTab(1) } className={(tab === 1) ? 'activeTab': ''} fullWidth> Tab 1</Button>
       </Grid>
         <Grid item xs={12} sm={2}>
-      <Button variant="outlined" size="large" name=" Tab 2" color="primary" onClick={() => setTab(2) } className={(tab == 1) ? '': 'activeTab'} fullWidth> Tab 2</Button>
+      <Button variant="outlined" size="large" name=" Tab 2" color="primary" onClick={() => setTab(2) } className={(tab === 1) ? '': 'activeTab'} fullWidth> Tab 2</Button>
 
       </Grid>
       </Grid>
@@ -40,7 +40,7 @@ export default function FeaturedInfo() {
           </div>
           <span className="featuredSub">Compared to last month</span>
         </div>
-        <div className={(tab == 1) ? 'featuredItem': 'featuredItem hide'} >
+        <div className={(tab === 1) ? 'featuredItem': 'featuredItem hide'} >
           <span className="featuredTitle">Cost</span>
           <div className="featuredMoneyContainer">
             <span className="featuredMoney">$2,225</span>
@@ -50,7 +50,7 @@ export default function FeaturedInfo() {
           </div>
           <span className="featuredSub">Compared to last month</span>
         </div>
-        <div className={(tab == 1) ? 'featuredItem': 'featuredItem hide'}>
+        <div className={(tab === 1) ? 'featuredItem': 'featuredItem hide'}>
           <span className="featuredTitle">Cost</span>
           <div className="featuredMoneyContainer">
             <span className="featuredMoney">$2,225</span>
