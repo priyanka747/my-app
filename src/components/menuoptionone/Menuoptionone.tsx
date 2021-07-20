@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,  {useState} from 'react'
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
@@ -10,16 +10,11 @@ import Grid from '@material-ui/core/Grid';
 import './menuoptionone.css'
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-// import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-// import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import SettingsIcon from '@material-ui/icons/Settings';
 import LanguageOutlinedIcon from '@material-ui/icons/LanguageOutlined';
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
-import Button from '@material-ui/core/Button';
-import ToggleButton from '@material-ui/lab/ToggleButton';
-import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import FeaturedInfo from '../featuredinfo/FeaturedInfo';
 import Chart from '../chart/Chart';
 import { userData } from '../../dummyData';
@@ -38,18 +33,12 @@ const useStyles = makeStyles((theme: Theme) =>
         gridStyle: {
             padding: '15px',
             font: 'normal normal normal 14px/17px Roboto',
-            // '& svg': {
-            //     margin: theme.spacing(1.5),
-            // },
-            // '& hr': {
-            //     margin: theme.spacing(0, 0.5),
-            // },
+          
         },
         demo: {
             backgroundColor: theme.palette.background.paper,
         },
         title: {
-            // margin: theme.spacing(4, 0, 2),
             display: 'flex',
             alignItems: 'center',
             fontSize: '18px',
@@ -64,13 +53,10 @@ const useStyles = makeStyles((theme: Theme) =>
         },
     }),
 );
+
 const Menuoptionone = () => {
     const classes = useStyles();
-    const [alignment, setAlignment] = React.useState('tab1');
-
-    const handleChange = (event: React.MouseEvent<HTMLElement>, newAlignment: string) => {
-        setAlignment(newAlignment);
-    };
+    const [name, setName] =useState("Jason Statham");
     return (
         <div className="home">
             <div className="mainWrapper">
@@ -148,7 +134,7 @@ const Menuoptionone = () => {
                         </Grid>
                     </AccordionDetails>
                 </Accordion>
-                <FeaturedInfo />
+                <FeaturedInfo  />
                 <Chart title='Analytics' dataKey='name' grid data={userData} />
             </div>
         </div>

@@ -7,6 +7,29 @@ import Button from '@material-ui/core/Button';
 import "./topbar.css"
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import { Divider } from '@material-ui/core';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import LinearProgress from '@material-ui/core/LinearProgress';
+import { makeStyles, createStyles, withStyles, Theme } from '@material-ui/core/styles';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import { Typography } from '@material-ui/core';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+
+const BorderLinearProgress = withStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      height: 10,
+      borderRadius: 5,
+    },
+    colorPrimary: {
+      backgroundColor: theme.palette.grey[theme.palette.type === 'light' ? 200 : 700],
+    },
+    bar: {
+      borderRadius: 5,
+      backgroundColor: '#1a90ff',
+    },
+  }),
+)(LinearProgress);
 
 type props = {
     name:string ;//= "Jason Statham"
@@ -56,6 +79,7 @@ const Topbar:React.FC<props> = ({name}) => {
             <KeyboardArrowDownIcon fontSize="small" /> 
             </div>
             <Menu
+                className="profileMenu"
                 id="menu-appbar"
                 anchorEl={anchorEl}
                 anchorOrigin={{
@@ -70,8 +94,16 @@ const Topbar:React.FC<props> = ({name}) => {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem alignItems='center' className="profileMenuItem" onClick={handleClose}><ListItemIcon><FavoriteIcon fontSize="medium" /></ListItemIcon><Typography >Menu 1</Typography> </MenuItem>
+                <Divider orientation="horizontal" /> 
+                <MenuItem alignItems='center' className="profileMenuItem" onClick={handleClose}><ListItemIcon><FavoriteIcon fontSize="medium" /></ListItemIcon><Typography >Menu 2</Typography> </MenuItem>
+                <Divider orientation="horizontal" /> 
+                <MenuItem alignItems='center' className="profileMenuItem" onClick={handleClose}><ListItemIcon><FavoriteIcon fontSize="medium" /></ListItemIcon><Typography >Menu 3</Typography> </MenuItem>
+                <Divider orientation="horizontal" /> 
+                <MenuItem alignItems='center' className="profileMenuItem" onClick={handleClose}><Typography >lorem ipsum</Typography> <LinearProgress variant="determinate" value={50} /> </MenuItem>
+                <Divider orientation="horizontal" /> 
+                <MenuItem alignItems='center' className="profileMenuItem" onClick={handleClose}><ListItemIcon><ExitToAppIcon  fontSize="medium" /></ListItemIcon><Typography >logout</Typography> </MenuItem>
+                <Divider orientation="horizontal" />  
               </Menu>
         </div>
       </div>

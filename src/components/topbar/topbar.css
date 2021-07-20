@@ -79,3 +79,21 @@
   .btn.btn-primary{
     background-color:#347AE2 ;
   }
+  .profileMenu{
+    top:65px;
+    position: absolute;
+
+  }
+  .profileMenuItem{
+    justify-content: flex-start;
+    text-align: left;
+    padding:15px 30px !important;
+  }
+  .MuiListItemIcon-root{
+    min-width: 28px !important;
+  }
+  .MuiMenu-paper{
+    top: 50px !important;
+    max-width: 300px !important;
+    clear: left !important;
+  }

@@ -1,16 +1,24 @@
 import "./featuredInfo.css";
 import Button from '@material-ui/core/Button';
 import { ArrowDownward, ArrowUpward } from "@material-ui/icons";
+import React, { useState } from "react";
 
+import Grid from '@material-ui/core/Grid';
 export default function FeaturedInfo() {
+  const [tab, setTab] = useState(2);
+  
   return (
     <div className="featuredWrapper">
-      <div className="featuredButtons">
+        <Grid container spacing={3} direction="row" alignItems="center">
+        <Grid item xs={12} sm={2}>
 
-      <Button variant="outlined" size="large" name=" Tab 1" color="primary" onClick={() => { alert('clicked') }}> Tab 1</Button>
-      <Button variant="outlined" size="large" name=" Tab 2" color="primary" onClick={() => { alert('clicked') }}> Tab 2</Button>
+      <Button variant="outlined" size="large" name=" Tab 1" color="primary" onClick={()=> setTab(1) } className={(tab == 1) ? 'activeTab': ''} fullWidth> Tab 1</Button>
+      </Grid>
+        <Grid item xs={12} sm={2}>
+      <Button variant="outlined" size="large" name=" Tab 2" color="primary" onClick={() => setTab(2) } className={(tab == 1) ? '': 'activeTab'} fullWidth> Tab 2</Button>
 
-      </div>
+      </Grid>
+      </Grid>
       <div className="featured">
         <div className="featuredItem">
           <span className="featuredTitle">Revanue</span>
@@ -32,7 +40,7 @@ export default function FeaturedInfo() {
           </div>
           <span className="featuredSub">Compared to last month</span>
         </div>
-        <div className="featuredItem">
+        <div className={(tab == 1) ? 'featuredItem': 'featuredItem hide'} >
           <span className="featuredTitle">Cost</span>
           <div className="featuredMoneyContainer">
             <span className="featuredMoney">$2,225</span>
@@ -42,7 +50,7 @@ export default function FeaturedInfo() {
           </div>
           <span className="featuredSub">Compared to last month</span>
         </div>
-        <div className="featuredItem">
+        <div className={(tab == 1) ? 'featuredItem': 'featuredItem hide'}>
           <span className="featuredTitle">Cost</span>
           <div className="featuredMoneyContainer">
             <span className="featuredMoney">$2,225</span>
@@ -56,3 +64,5 @@ export default function FeaturedInfo() {
     </div>
   );
 }
+
+

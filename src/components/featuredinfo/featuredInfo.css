@@ -6,11 +6,18 @@
     margin :15px 0px;
     /* padding: 25px; */
   }
+  .featuredButtons{
+      display: flex;
+      flex-direction: row;
+      min-width: 20%;
+    justify-content: flex-start;      /* border: 1px solid #9B9B9B; */
+    
+  }
 .featured {
     width: 100%;
     display: flex;
     flex-flow: row;
-    justify-content:space-around;
+    justify-content:flex-start;
     margin :15px 0px;
     /* padding: 25px; */
   }
@@ -22,6 +29,7 @@
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
+    max-width: 25%;
     /* -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75); */
     /* box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75); */
   }
@@ -62,4 +70,15 @@
   .featuredSub{
       font-size: 15px;
       color: gray;
+  }
+
+  .activeTab{
+      background-color: #ffffff !important;
+      border:1px solid #347AE2 !important;
+      font: normal normal normal 18px Roboto;
+      color: #347AE2 !important;
+
+  }
+  .hide{
+      display: none;
   }
