@@ -5,13 +5,29 @@ import PersonIcon from '@material-ui/icons/Person';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import Button from '@material-ui/core/Button';
 import "./topbar.css"
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
 
 type props = {
     name:string ;//= "Jason Statham"
 
     }
 const Topbar:React.FC<props> = ({name}) => {
-    
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+
+  // const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   setAuth(event.target.checked);
+  // };
+
+  const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
     return (
         <div className="topbar">
       <div className="topbarWrapper">
@@ -35,10 +51,28 @@ const Topbar:React.FC<props> = ({name}) => {
           <div className="topbarIconContainer">
             <PersonIcon fontSize="small"/> 
             </div>
-            <span className="nameSt"> { name }</span> 
+            <span className="nameSt"  onClick={handleMenu}> { name }</span> 
             <div className="topbarIconContainer">
-            <KeyboardArrowDownIcon fontSize="small"/> 
+            <KeyboardArrowDownIcon fontSize="small" /> 
             </div>
+            <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={open}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={handleClose}>My account</MenuItem>
+              </Menu>
         </div>
       </div>
     </div>
